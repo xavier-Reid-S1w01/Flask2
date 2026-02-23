@@ -1,0 +1,27 @@
+-- database: ./database.db
+
+-- Use the ▷ button in the top right corner to run the entire file.
+
+SELECT * FROM Bikes;
+
+INSERT INTO Bikes(Model,TopSpeed,Cost,Description) VALUES("MT-03",108,5300,"The 2026 Yamaha MT-03 features a 321cc twin-cylinder engine. It hits a top speed of ~108 mph (174 km/h) and has an MSRP of $4,999. It's a lightweight, agile naked bike perfect for beginners.");
+
+
+
+
+-- Adding a few more Yamaha models (MakerID 0)
+INSERT INTO Bikes (BikeID, MakerID, Model, TopSpeed, Cost, Description, ImageURL)
+VALUES (3, 0, 'YZF-R1', 186, 18000, 'Flagship supersport with a 998cc crossplane engine.', NULL);
+
+INSERT INTO Bikes (BikeID, MakerID, Model, TopSpeed, Cost, Description, ImageURL)
+VALUES (4, 0, 'Ténéré 700', 115, 10799, 'Versatile adventure bike built for off-road dominance.', NULL);
+
+-- Adding other manufacturers (Assuming MakerID 1 is Honda, 2 is Kawasaki)
+INSERT INTO Bikes (BikeID, MakerID, Model, TopSpeed, Cost, Description, ImageURL)
+VALUES (5, 1, 'CBR1000RR-R', 188, 28900, 'Honda Fireblade SP designed for track performance.', NULL);
+
+INSERT INTO Bikes (BikeID, MakerID, Model, TopSpeed, Cost, Description, ImageURL)
+VALUES (6, 2, 'Ninja H2', 209, 31500, 'Supercharged hypersport motorcycle.', NULL);
+
+INSERT INTO Bikes (BikeID, MakerID, Model, TopSpeed, Cost, Description, ImageURL)
+VALUES (7, 1, 'Rebel 500', 95, 6499, 'Modern cruiser with a lean, low-set "bobber" silhouette.', NULL);
