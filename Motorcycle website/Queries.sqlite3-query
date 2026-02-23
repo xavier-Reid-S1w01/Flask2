@@ -25,3 +25,17 @@ VALUES (6, 2, 'Ninja H2', 209, 31500, 'Supercharged hypersport motorcycle.', NUL
 
 INSERT INTO Bikes (BikeID, MakerID, Model, TopSpeed, Cost, Description, ImageURL)
 VALUES (7, 1, 'Rebel 500', 95, 6499, 'Modern cruiser with a lean, low-set "bobber" silhouette.', NULL);
+
+-- All bikes
+SELECT * FROM Bikes
+
+-- All bikes and the maker
+
+SELECT Makers.Name,Bikes.Model FROM Bikes
+JOIN Makers ON Makers.MakerID=Bikes.MakerID;
+
+-- Bikes of one make
+
+SELECT Bikes.Model FROM Bikes
+JOIN Makers ON Makers.MakerID=Bikes.MakerID
+WHERE Makers.Name="Yamaha";
