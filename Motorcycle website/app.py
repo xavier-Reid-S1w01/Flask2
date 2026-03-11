@@ -33,7 +33,7 @@ def home():
                 FROM Bikes
                 Join Makers ON Makers.MakerID=Bikes.MakerID;"""
     results = query_db(sql)
-    return render_template("layout.html")
+    return render_template("home.html",results=results)
 
 @app.route("/bike/<int:id>")
 def bike(id):
